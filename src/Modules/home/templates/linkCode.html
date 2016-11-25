@@ -1,0 +1,46 @@
+<div ng-controller="linkCodeController as vm" class="">
+
+    <style>
+    </style>
+
+    <div id="pageContainer">
+
+        <div ng-if="!vm.debugMode && !vm.isError">
+            Redirecting...
+        </div>
+
+        <div ng-if="!vm.debugMode && vm.isError" style="color: darkred">
+            Sorry! Unable to find link code. ({{vm.linkCode}})
+        </div>
+
+        <div ng-if="vm.debugMode">
+
+            <h1>Link Shortener</h1>
+
+            <table>
+                <tr>
+                    <td width="100px">Code:</td>
+                    <td>{{ vm.linkCode }}</td>
+                </tr>
+                <tr>
+                    <td>Status:</td>
+                    <td>{{ vm.status }}</td>
+                </tr>
+                <tr>
+                    <td>Url:</td>
+                    <td><a href="{{ vm.linkUrl }}" target="_blank">{{ vm.linkUrl }}</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Response:</td>
+                </tr>
+                <tr>
+                    <td colspan="2">{{ vm.responseStr }}</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+

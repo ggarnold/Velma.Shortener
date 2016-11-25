@@ -1,0 +1,31 @@
+
+<html lang="en" ng-app="app" >
+    <head>
+        <!--<base href="/">-->
+        <!-- Local Resources -->
+        <title ng-bind="session.pageTitle"></title>
+        <link rel="shortcut icon" type="application/ico" href="Assets/images/favicon.ico" />
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        
+        <!-- Angular and Angular Routing MAKE SURE ANGULAR FIRST FOR 3RD PARTIES -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+        
+        <!-- 3rd Party Angular Libraries -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.7/angular-local-storage.min.js"></script>
+
+        <!-- Application -->
+        <script src="site.min.js"></script>
+    </head>
+
+    <body ng-controller="baseController as base" id="body">
+
+        <!-- Content -->
+        <div class="container-fluid content" ng-view></div>
+
+    </body>
+</html>
